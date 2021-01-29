@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-webcap"
+    version="1.0.0">
+    <name>Cordova Web Capture</name>
+    <description></description>
+    <platform name="android">
+      <js-module src="www/webcap.js" name="webcap">
+        <runs/>
+        <clobbers target="WebCap" />
+      </js-module>
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="WebCap">
+          <param name="android-package" value="com.cordova.plugin.WebCap" />
+          <param name="onload" value="true" />
+        </feature>
+      </config-file>
+      <source-file src="src/android/com/cordova/plugin/WebCap.java" target-dir="src/com/cordova/plugin" />
+    </platform>
+    <platform name="ios">
+        <js-module src="www/webcap.js" name="webcap">
+            <runs/>
+            <clobbers target="WebCap" />
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="WebCap">
+                <param name="ios-package" value="WebCap" onload="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/WebCap.h" />
+        <source-file src="src/ios/WebCap.m" />
+    </platform>
+</plugin>
