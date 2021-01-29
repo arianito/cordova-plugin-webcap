@@ -21,7 +21,7 @@ import java.io.IOException;
 import androidx.core.content.FileProvider;
 import java.io.InputStream;
 
-public class IGStory extends CordovaPlugin {
+public class WebCap extends CordovaPlugin {
   private static final String TAG = "WebCap";
   private CallbackContext callback = null;
 
